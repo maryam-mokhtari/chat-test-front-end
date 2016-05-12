@@ -2,13 +2,14 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as MessageActions from '../actions/MessageActions'
-import ChatForm from '../components/ChatForm'
+import Chat from '../components/Chat'
+import Div from '../components/RadiumTest'
 
 export default class App extends Component {
   render() {
     const { messages, messageActions } = this.props;
-
-    return <ChatForm
+    // return <Div>Salam</Div>
+    return <Chat
       data={messages.data}
       activeSender={messages.activeSender}
       messageActions={messageActions} />
